@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 1234984731}
   - component: {fileID: 1234984730}
   - component: {fileID: 1234984734}
+  - component: {fileID: 1234984735}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -447,6 +448,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deea62a4a0a243547b59aa9d4d7443fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1234984735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234984729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c68593a87f6181f4ca45471ac414ae64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPositions:
+  - {x: 0.227, y: 0, z: -0.33}
+  - {x: -0.049, y: 0, z: -0.33}
+  - {x: 0.227, y: 0, z: 0.367}
+  - {x: -0.049, y: 0, z: 0.367}
+  - {x: 0.227, y: 0, z: 0.131}
+  - {x: -0.049, y: 0, z: 0.131}
+  - {x: 0.227, y: 0, z: -0.114}
+  - {x: -0.049, y: 0, z: -0.114}
+  installer: {fileID: 1566805232}
 --- !u!1 &1266729395 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6665938886355432890, guid: 3740274ce8ba2dd4b8e9a6849f3297b2, type: 3}

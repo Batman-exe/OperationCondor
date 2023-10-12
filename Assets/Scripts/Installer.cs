@@ -5,7 +5,7 @@ using UnityEngine;
 public class Installer : MonoBehaviour
 {
     [SerializeField] private CardObserver cardObserver;
-    [SerializeField] private List<GameObject> cards;
+    [SerializeField] public List<GameObject> cards;
 
     private void Awake()
     {
