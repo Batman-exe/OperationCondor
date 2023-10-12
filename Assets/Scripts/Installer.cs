@@ -5,14 +5,19 @@ using UnityEngine;
 public class Installer : MonoBehaviour
 {
     [SerializeField] private CardObserver cardObserver;
-    [SerializeField] public List<GameObject> cards;
+    private List<GameObject> cards = new List<GameObject>();
 
-    private void Awake()
+    private void Start()
     {
         for(int i = 0; i < cards.Count; i++)
         {
             Card card = cards[i].GetComponentInChildren<Card>();
             cardObserver.Configure(card);
         }
+    }
+
+    public void AddCard(GameObject cardContainer)
+    {
+        cards.Add(cardContainer);
     }
 }

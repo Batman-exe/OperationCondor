@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class CardSpawner : MonoBehaviour
 {
+    [SerializeField] private List<GameObject> cards;
     [SerializeField] private List<Vector3> spawnPositions;
-    public Installer installer;
 
-    private void Start()
+    private void Awake()
     {
-        installer = GameObject.FindObjectOfType<Installer>();
+        Installer installer = GameObject.FindObjectOfType<Installer>();
+        foreach (var card in cards)
+        {
+            installer.AddCard(Instantiate(card));
+        }
+
         ShuffleCards();
     }
 
@@ -19,10 +24,10 @@ public class CardSpawner : MonoBehaviour
     private void ShuffleCards()
     {
         List<Vector3> positions = new(spawnPositions);
-        for (int i = 0; i < installer.cards.Count; i++)
+        for (int i = 0; i < cards.Count; i++)
         {
             int randPos = Random.Range(0, positions.Count);
-            installer.cards[i].transform.position = positions[randPos];
+            cards[i].transform.position = positions[randPos];
             positions.RemoveAt(randPos);
         }
     }
